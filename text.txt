@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>I Wanna Become Hockey Player</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Bangers', cursive;
+      line-height: 1.6;
+      color: white;
+      animation: bgChange 12s infinite alternate;
+      background: linear-gradient(45deg, #ff4b1f, #1fddff, #28a745, #ffc107);
+      background-size: 400% 400%;
+    }
+    @keyframes bgChange {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      padding: 30px 16px;
+      text-align: center;
+      font-size: 2.8em;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    }
+    nav {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.4);
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 16px;
+      text-align: center;
+    }
+    section {
+      padding: 20px 0;
+      border-top: 2px solid rgba(255,255,255,0.3);
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    }
+    p, li {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: auto;
+    }
+    ul { list-style: none; padding: 0; }
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border: 0;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.3);
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 1.1em;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: rgba(255,255,255,0.5);
+    }
+    footer {
+      padding: 16px;
+      text-align: center;
+      font-size: 0.9em;
+      border-top: 2px solid rgba(255,255,255,0.3);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    I Wanna Become Hockey Player
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Training</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About My Journey</h2>
+      <p>I'm passionate about hockey and working hard every day to improve my skills, fitness, and game sense.</p>
+      <button class="btn" id="helloBtn">Click me</button>
+      <p id="msg" style="margin-top:8px;"></p>
+    </section>
+
+    <section id="projects">
+      <h2>My Training Plan</h2>
+      <ul>
+        <li>🏑 Morning fitness drills</li>
+        <li>🏑 Stick handling practice</li>
+        <li>🏑 Evening scrimmages with local teams</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <form onsubmit="return false;">
+        <label>
+          Name<br />
+          <input type="text" placeholder="Your name" required style="padding:8px;border:none;border-radius:4px;">
+        </label><br /><br />
+        <label>
+          Message<br />
+          <textarea rows="4" placeholder="Say hi..." required style="padding:8px;border:none;border-radius:4px;"></textarea>
+        </label><br /><br />
+        <button class="btn">Send (demo)</button>
+      </form>
+      <p style="font-size: 0.9em;">Form is just a demo (no backend).</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Hockey Dreamer
+  </footer>
+
+  <script>
+    const btn = document.getElementById('helloBtn');
+    const msg = document.getElementById('msg');
+    btn.addEventListener('click', () => {
+      msg.textContent = "Keep chasing your hockey dream! 🏑🔥";
+    });
+  </script>
+
+</body>
+</html>
